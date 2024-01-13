@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4></h4></div>
+        <div class="right headerItems"><h3><%= searchedStudent.student_teacher %>  </h3></div>
+      </div>
+      
+    
+
+
+<hr>
+
+<!-- replace students with student's name  -->
+<h1>Edit <%= searchedStudent.student_name %>'s grades</h1>
+
+<div class="row">
+
+    <span class="showDatabase dataTitle">
+        <h2>Name</h2>
+     </span>
+
+    <span class="showDatabase dataTitle">
+       <h2>ID</h2>
+    </span>
+
+        
+
+    <span class="showDatabase dataTitle" >
+       
+        <h2> Math</h2>
+        
+    </span>
+
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> English</h2>
+        
+    </span>
+    
+    <span class="showDatabase dataTitle">
+       
+        <h2> Science</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> History</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> Art</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> Letter Grade</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> GPA</h2>
+        
+    </span>
+
+</div>
+<form action="/editStudents" method="post">
+<div class="row">
+
+    <span class="showDatabase">
+        <h2><%= searchedStudent.student_name %></h2>
+     </span>
+
+    <span class="showDatabase">
+       <h2><%= searchedStudent.id %></h2>
+       <input type="hidden" name="idOfStudent" value="<%= searchedStudent.id %>">
+    </span>
+        
+
+    <input type="text" value="<%= studentGrades.math %>" class="editdetails" maxlength="3" name="updatedMath">
+
+    <input type="text" value="<%= studentGrades.english %>" class="editdetails" maxlength="3" name="updatedEnglish">
+
+    <input type="text" value="<%= studentGrades.science %>" class="editdetails" maxlength="3" name="updatedScience">
+
+    <input type="text" value="<%= studentGrades.history %>" class="editdetails" maxlength="3" name="updatedHistory">
+
+    <input type="text" value="<%= studentGrades.art %>" class="editdetails" maxlength="3" name="updatedArt">
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.letter_grade %> </h2>
+        
+    </span>
+
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.GPA %> </h2>
+        
+    </span>
+
+
+       
+        
+ 
+
+</div>
+
+<br><br>
+
+    <div class="search-bar">
+        
+            <button type="submit" class="btn" value="<%= searchedStudent.student_name %>" name="updatingGrades">Save</button>
+            <button type="submit" class="btn" name="backToStudentView" value="<%= searchedStudent.student_name %>">cancel</button>
+       
+    </div>
+    
+</form>
+
+</body>
+</html>

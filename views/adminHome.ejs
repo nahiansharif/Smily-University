@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3>Admin  </h3></div>
+      </div>
+      
+    
+
+
+<hr>
+
+<!-- replace students with student's name  -->
+<h1>Administration's home page</h1>
+
+<h3>Add or View</h3>
+<form action="/adminHome" method="post">
+    <div class="search-bar">
+        <button type="submit" class="btn" name="studentAH" value="student">Students</button>
+        <button type="submit" class="btn" name="teacherAH" value="teacher">Teacher </button>
+    </div>
+    
+</form>
+
+<div class="container minicontainer">
+
+    <div class="left headerItems"><h2>Income: </h2></div>
+    <div class="right headerItems"><h2> <%= showIncome %> </h2></div>    
+</div>
+<div class="container minicontainer">
+    <div class="left headerItems"><h2>Spend: </h2></div>
+    <div class="right headerItems"><h2> <%= showSpend %> </h2></div>    
+</div>
+<div class="container minicontainer">
+    <div class="left headerItems"><h2>Number of Students: </h2></div>
+    <div class="right headerItems"><h2> <%= showNumOfStudents %> </h2></div>    
+</div>
+<div class="container minicontainer">
+    <div class="left headerItems"><h2>Number of Teacher: </h2></div>
+    <div class="right headerItems"><h2> <%= showNumOfTeacher %> </h2></div>    
+</div>
+<div class="container minicontainer">
+    <div class="left headerItems"><h2>Profit: </h2></div>
+    <div class="right headerItems"><h2> <%= showProfit %> </h2></div>    
+
+</div>
+</body>
+</html>

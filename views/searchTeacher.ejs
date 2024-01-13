@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3>Admin  </h3></div>
+      </div>
+
+
+
+<hr>
+    <h1>Search Teacher</h1>
+    <div class="search-bar">
+      <form action="/searchTeacher" method="post">
+        <input type="text" placeholder="Search Teachers" id="search-bar" list="search-suggestions" name="searchedTeacherName">
+        <datalist id="search-suggestions">
+          <% teachers.forEach(function(teacher) { %>
+            <option value="<%= teacher.name %>">
+          <% }); %>
+      
+
+          </datalist>
+        <button type="submit" name="adminSearchTeacher" value="Search">Search</button>
+      </form>
+
+      </div>
+      <br><br>
+      <div class="search-bar">
+        <button type="submit" class="btn" onclick="location.href='http://localhost:3000/adminAddTeacher'">Add New Teacher</button>
+        <button class="btn" onclick="location.href='http://localhost:3000/adminHome'" >Back</button>
+    
+    </div>
+
+      <br><br>
+      <div class="container minicontainer">
+
+        <div class="left headerItems"><h2>Name</h2></div>
+        <div class="right headerItems"><h2>ID</h2></div>    
+    
+    </div>
+
+      <hr>
+
+<!-- <% if (Array.isArray(teachers) && teachers.length) { %>
+<% teachers.forEach(function(teacher) { %>
+    <div class="container minicontainer">
+
+        <div class="left headerItems"><h2> <%= teacher.name %></h2></div>
+        <div class="right headerItems"><h2> <%= teacher.id %></h2></div>    
+    
+    </div>
+    <% }); %>
+    <% } else { %>
+      <div class="container minicontainer">
+
+        <div class="left headerItems"><h2> N/A</h2></div>
+        <div class="right headerItems"><h2> N/A</h2></div>    
+    
+    </div>
+    <% } %> -->
+
+    <% if (Array.isArray(teachers) && teachers.length) { %>
+      <% teachers.forEach(function(teacher) { %>
+        <div class="container minicontainer">
+          <div class="left headerItems">
+            <h2> <%= teacher.name %></h2>
+          </div>
+          <div class="right headerItems">
+            <h2> <%= teacher.id %></h2>
+          </div>    
+        </div>
+      <% }); %>
+    <% } else { %>
+      <div class="container minicontainer">
+        <div class="left headerItems">
+          <h2> N/A</h2>
+        </div>
+        <div class="right headerItems">
+          <h2> N/A</h2>
+        </div>    
+      </div>
+    <% } %>
+    
+
+
+    <div class="search-bar">
+      <button type="submit" class="btn" onclick="location.href='http://localhost:3000/adminAddTeacher'">Add New Teacher</button>
+      <button class="btn" onclick="location.href='http://localhost:3000/adminHome'" >Back</button>
+  
+  </div>
+
+    
+
+
+
+    
+
+
+</body>
+</html>

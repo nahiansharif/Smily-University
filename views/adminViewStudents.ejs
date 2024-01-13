@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3>Admin  </h3></div>
+      </div>
+      
+    
+
+
+<hr>
+
+
+<h1><%= searchedStudent.student_Name %>'s Details</h1>
+
+<div class="row">
+
+    <!-- id cannot be changed  -->
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+        <h2>ID</h2>
+     </span>
+
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+        <h2>letter Grade</h2>
+     </span>
+
+
+        
+
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+       
+        <h2> GPA</h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Name </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Teacher</h2>
+        
+    </span>
+
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Phone Number </h2>
+        
+    </span>
+    
+    <span class="adminCells admin30charSize" style="background-color: yellow;">
+       
+        <h2> Email </h2>
+        
+    </span>
+
+    <span class="adminCells admin80charSize" style="background-color: yellow;">
+       
+        <h2> Address </h2>
+        
+    </span>
+
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+       
+        <h2> Fee </h2>
+        
+    </span>
+
+
+</div>
+
+<div class="row">
+
+    <!-- id cannot be changed  -->
+    <span class="adminCells admin4charSize">
+        <h2><%= searchedStudent.id %></h2>
+     
+     </span>
+
+     <!-- letter Grade -->
+    <span class="adminCells admin4charSize">
+       <h2>A</h2>
+    </span>
+
+        
+<!-- GPA  -->
+    <span class="adminCells admin4charSize" >
+       
+        <h2> 3.5 </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize">
+       
+        <h2> <%= searchedStudent.student_Name %></h2>
+        
+    </span>
+    <!-- teacher  -->
+    <span class="adminCells admin12charSize">
+       
+        <h2>  <%= searchedStudent.student_teacher %></h2>
+        
+    </span>
+
+<!-- phone Number -->
+    <span class="adminCells admin12charSize">
+       
+        <h2>  <%= searchedStudent.student_phone_number %></h2>
+        
+    </span>
+    
+    
+
+    <!-- Email  -->
+    <span class="adminCells admin30charSize">
+       
+        <h2>  <%= searchedStudent.student_email %></h2>
+        
+    </span>
+
+    <!-- address  -->
+    <span class="adminCells admin80charSize">
+       
+        <h2>  <%= searchedStudent.student_address %> </h2>
+        
+    </span>
+
+    <!-- fee  -->
+    <span class="adminCells admin4charSize">
+       
+        <h2>  <%= searchedStudent.student_salary %></h2>
+        
+    </span>
+
+</div>
+
+<br><br>
+<form action="/adminViewStudents" method="post">
+    <div class="search-bar">
+        <button type="submit" class="btn" name="updateStudents" value="<%= searchedStudent.id %>">Update</button>
+        <button type="submit" class="btn" name="deleteStudent" value="<%= searchedStudent.id %>">Delete</button>
+        <button type="submit" class="btn" name="backToAdminStudentSearch" value="backToAdminHome">Back</button>
+    </div>
+    
+</form>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4></h4></div>
+        <h3><%= searchedStudent.student_teacher %></h3>
+    
+      </div>
+      
+    
+
+
+<hr>
+
+
+<h1><%= searchedStudent.student_name %>'s Record</h1>
+
+<div class="row">
+
+    <span class="showDatabase dataTitle">
+        <h2>Name</h2>
+     </span>
+
+    <span class="showDatabase dataTitle">
+       <h2>ID</h2>
+    </span>
+
+        
+
+    <span class="showDatabase dataTitle" >
+       
+        <h2> Math</h2>
+        
+    </span>
+
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> English</h2>
+        
+    </span>
+    
+    <span class="showDatabase dataTitle">
+       
+        <h2> Science</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> History</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> Art</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> Letter Grade</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> GPA</h2>
+        
+    </span>
+
+</div>
+
+<div class="row">
+
+    <span class="showDatabase">
+        <h2><%= searchedStudent.student_name %></h2>
+     </span>
+
+    <span class="showDatabase">
+       <h2><%= searchedStudent.id %></h2>
+    </span>
+
+        
+
+    <span class="showDatabase" >
+       
+        <h2> <%= studentGrades.math %>  </h2>
+        
+    </span>
+
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.english %> </h2>
+        
+    </span>
+    
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.science %> </h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.history %> </h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.art %> </h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.letter_grade %> </h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= studentGrades.GPA %> </h2>
+        
+    </span>
+
+</div>
+
+<br><br>
+<form action="/viewStudents" method="post">
+    <div class="search-bar">
+        <button type="submit" class="btn" name="updateStudents" value="<%= searchedStudent.id %>">Update</button>
+        <button type="submit" class="btn" name="backToTeacherHome" value="<%= searchedStudent.student_teacher %>">Back</button>
+    </div>
+    
+</form>
+
+</body>
+</html>

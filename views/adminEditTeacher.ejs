@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3>Admin  </h3></div>
+      </div>
+      
+    
+
+
+<hr>
+
+
+<h1>Edit Teacher's Details</h1>
+
+<div class="row">
+
+    <!-- id cannot be changed  -->
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+        <h2>ID</h2>
+     </span>
+
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Name </h2>
+        
+    </span>
+
+
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Phone Number </h2>
+        
+    </span>
+    
+    <span class="adminCells admin30charSize" style="background-color: yellow;">
+       
+        <h2> Email </h2>
+        
+    </span>
+
+    <span class="adminCells admin80charSize" style="background-color: yellow;">
+       
+        <h2> Address </h2>
+        
+    </span>
+
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+       
+        <h2> Salary </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Username </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Password </h2>
+        
+    </span>
+
+
+</div>
+<form action="/adminEditTeacher" method="post">
+<div class="row">
+
+    <!-- id cannot be changed  -->
+    <span class="adminCells admin4charSize">
+        <h2>  <%= editTeacher.id %></h2>
+        <input type="hidden" value="<%= editTeacher.id %>" name="editTeacherid">
+     </span>
+
+    <!-- teacher  -->
+    <input type="text" value="<%=  editTeacher.name %>" class="adminCells admin12charSize adminFormFont" maxlength="20" name="editTeachername">
+
+
+<!-- phone Number -->
+<input type="text" value="<%=  editTeacher.phone_number %>" class="adminCells admin12charSize adminFormFont" maxlength="12" name="editTeacherphone">
+    
+    
+
+    <!-- Email  -->
+    <input type="email" value="<%=  editTeacher.email %>" class="adminCells admin30charSize adminFormFont" maxlength="30" name="editTeacheremail">
+
+    <!-- address  -->
+    <input type="text" value="<%=  editTeacher.address %>" class="adminCells admin80charSize adminFormFont" maxlength="50" name="editTeacheraddress">
+
+    <!-- Salary  -->
+    <input type="" value="<%=  editTeacher.salary %>" class="adminCells admin4charSize adminFormFont" maxlength="4" name="editTeachersalary">
+
+    <input type="text" value="<%=  editTeacher.username %>" class="adminCells admin12charSize adminFormFont" maxlength="20" name="editTeacherusername">
+
+    <input type="text" value="<%=  editTeacher.password %>" class="adminCells admin12charSize adminFormFont" maxlength="20" name="editTeacherpassword">
+</div>
+
+<br><br>
+
+    <div class="search-bar">
+        <button type="submit" class="btn" name="adminSaveEditTeacher" value="<%= editTeacher.id %>">Save</button>
+        <button type="submit" class="btn" name="adminCancelEditTeacher" value="<%= editTeacher.name %>">cancel</button>
+    </div>
+    
+</form>
+
+</body>
+</html>

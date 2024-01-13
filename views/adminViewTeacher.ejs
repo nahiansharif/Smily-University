@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3>Admin </h3></div>
+    </div>
+   
+
+
+<hr>
+
+
+<h1><%= searchedTeacher.name %>'s Record</h1>
+
+<div class="row">
+
+    <!-- id cannot be changed  -->
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+        <h2>ID</h2>
+     </span>
+
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Name </h2>
+        
+    </span>
+
+
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Phone Number </h2>
+        
+    </span>
+    
+    <span class="adminCells admin30charSize" style="background-color: yellow;">
+       
+        <h2> Email </h2>
+        
+    </span>
+
+    <span class="adminCells admin80charSize" style="background-color: yellow;">
+       
+        <h2> Address </h2>
+        
+    </span>
+
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+       
+        <h2> Salary </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Username </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Password </h2>
+        
+    </span>
+
+
+</div>
+
+<div class="row">
+
+    <!-- id cannot be changed  -->
+    <span class="adminCells admin4charSize">
+        <h2><%= searchedTeacher.id %></h2>
+     </span>
+
+    <!-- teacher  -->
+    <span class="adminCells admin12charSize">
+       
+        <h2> <%= searchedTeacher.name %></h2>
+        
+    </span>
+
+<!-- phone Number -->
+    <span class="adminCells admin12charSize">
+       
+        <h2> <%= searchedTeacher.phone_number %></h2>
+        
+    </span>
+    
+    
+
+    <!-- Email  -->
+    <span class="adminCells admin30charSize">
+       
+        <h2> <%= searchedTeacher.email %></h2>
+        
+    </span>
+
+    <!-- address  -->
+    <span class="adminCells admin80charSize">
+       
+        <h2> <%= searchedTeacher.address %> </h2>
+        
+    </span>
+
+    <!-- Salary  -->
+    <span class="adminCells admin4charSize">
+       
+        <h2> $<%= searchedTeacher.salary %></h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize">
+       
+        <h2> <%= searchedTeacher.username %></h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize">
+       
+        <h2> <%= searchedTeacher.password %></h2>
+        
+    </span>
+</div>
+<br><br>
+
+<form action="/adminVIewTeacher" method="post">
+    <div class="search-bar">
+        <button type="submit" class="btn" name="updateTeacher" value="<%= searchedTeacher.id %>">Update</button>
+        <button type="submit" class="btn" name="deleteTeacher" value="<%= searchedTeacher.id %>"> Delete </button>
+    </form>
+        
+    <button type="submit" class="btn">Back</button>
+
+        
+    </div>
+
+
+    <h1><%= searchedTeacher.name %>'s Students</h1>
+
+  <hr><br>
+  <% if (Array.isArray(studentWithThisTeacher) && studentWithThisTeacher.length) { %>
+        <% studentWithThisTeacher.forEach(function(student) { %>
+           <h1> <%= student.student_name  %> </h1>
+          <% }); %>
+          <% } else { %>
+            <h1> N/A </h1>
+            <% } %>
+        
+   
+
+</body>
+</html>

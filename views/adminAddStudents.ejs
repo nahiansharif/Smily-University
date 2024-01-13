@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3>Admin  </h3></div>
+      </div>
+      
+    
+
+
+<hr>
+
+<h1>Add New Students </h1>
+
+<div class="row">
+
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Name </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Teacher </h2>
+        
+    </span>
+
+    <span class="adminCells admin12charSize" style="background-color: yellow;">
+       
+        <h2> Phone Number </h2>
+        
+    </span>
+    
+    <span class="adminCells admin30charSize" style="background-color: yellow;">
+       
+        <h2> Email </h2>
+        
+    </span>
+
+    <span class="adminCells admin80charSize" style="background-color: yellow;">
+       
+        <h2> Address </h2>
+        
+    </span>
+
+    <span class="adminCells admin4charSize" style="background-color: yellow;">
+       
+        <h2> Fee </h2>
+        
+    </span>
+
+
+</div>
+
+<form action="/adminAddStudents" method="post">
+
+<div class="row">
+
+    <!-- name  -->
+    <input type="text" placeholder="Student Name" class="adminCells admin12charSize adminFormFont" maxlength="20" name="studentName" required>
+
+    <!-- teacher  -->
+    <!-- <input type="text" value="Ricky Smith" class="adminCells admin12charSize adminFormFont" maxlength="20"> -->
+
+    <select name="teacherSelection" id="selectingTeacher" class="adminCells admin12charSize adminFormFont" style="height: 109px;">
+        <% teachers.forEach(function(teacher) { %>
+            <option name="studentsTeacher" ><%= teacher.name %></option>
+          <% }); %>
+        
+    </select>
+
+    <!-- phone Number -->
+    <input type="tel" placeholder="888-888-8888" class="adminCells admin12charSize adminFormFont" maxlength="12" name="studentPhone" required>
+
+    <!-- Email  -->
+    <input type="email" placeholder="SmilyUniversity@gmail.com" class="adminCells admin30charSize adminFormFont" maxlength="30" name="studentEmail" required>
+
+    <!-- address  -->
+    <input type="text" placeholder="12345 USA street, USA city, USA State" class="adminCells admin80charSize adminFormFont" maxlength="50" name="studentAddress" required>
+
+    <!-- fee  --> 
+    <input type="" placeholder="300" class="adminCells admin4charSize adminFormFont" maxlength="3" name="studentFee" required>
+
+</div>
+
+<br><br>
+
+    <div class="search-bar">
+        <button type="submit" class="btn" name="savingNewSTudent" value="b">Save</button></form>
+        <button onclick="location.href='http://localhost:3000/searchStudent'" class="btn">Cancel</button>
+    </div>
+    
+
+
+</body>
+</html>

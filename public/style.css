@@ -1,0 +1,213 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #AEE2FF;
+}
+h1 {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+}
+
+p {
+  color: #666666;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.row {
+    display: flex;
+      justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .headerItems {
+ text-align: center;
+ padding: 0px 2%;
+  }
+
+  .showDatabase{
+    /* padding: 0px 20px; */
+    flex: 1;
+    text-align: center;
+    border: solid;
+    background-color: white;
+  }
+
+  
+
+
+  .signInCSS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    padding: 20px;
+  }
+  
+  .signInCSS img {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .signInCSS h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h3
+  {
+    text-align: center;
+  }
+  
+  .signInCSS form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signInCSS input[type="text"],
+  .signInCSS input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+.btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+  }
+  
+.btn:hover{
+    background-color: #3e8e41;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .minicontainer{
+    width: 25%; 
+    margin: 0 auto;
+  }
+  
+  .left {
+    text-align: left;
+  }
+  
+  .middle {
+    text-align: center;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .search-bar button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 5px;
+  }
+  
+  .search-bar button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+  .editdetails
+  {
+      flex: 1;
+      text-align: center;
+      border: solid;
+      background-color: rgb(170, 170, 170);
+      font-size: 30px;
+      width: 11%;
+      padding: 16px 0px;
+  }
+  
+
+.adminCells{
+  background-color: white;
+  height: 100px;
+  border: solid;
+  text-align: center;
+  
+}
+
+.dataTitle{
+  background-color: yellow;
+}
+
+.admin4charSize{
+  width: 5%;
+}
+
+/* phone  */
+.admin12charSize{
+width: 15%;
+}
+
+.admin30charSize{
+  width: 25%;
+}
+
+.admin80charSize{
+  width: 40%;
+}
+
+.adminFormFont{
+  font-size: large; 
+  font-weight: bold;
+  background-color: rgb(185, 185, 185);
+
+}

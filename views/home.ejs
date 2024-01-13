@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png"> </div>
+        <div class="middle headerItems"> <h1> Smily University</h1>    </div>
+        <div class="right headerItems"><button class="btn" onclick="location.href='http://localhost:3000/logIn'"> log in </button></div>
+      </div>
+      
+    
+
+
+<hr>
+
+<h1>Welcome to Smily University!</h1>
+  <p>Smily University is a prestigious institution of higher learning located in the heart of the city. With state-of-the-art facilities and world-class faculty, we offer a comprehensive range of academic programs that are designed to prepare students for success in the global marketplace.</p>
+  <p>Our mission is to provide a transformative educational experience that fosters intellectual curiosity, critical thinking, and a lifelong commitment to learning. At Smily University, you'll be part of a vibrant and diverse community of scholars who are dedicated to making a positive impact on the world.</p>
+  <p>Whether you're interested in pursuing a degree in business, engineering, the arts, or any other field, Smily University has the resources and support you need to achieve your goals. We invite you to explore our website and discover all that Smily University has to offer!</p>
+
+
+
+<h1>Student Board</h1>
+
+<div class="row">
+  
+    <span class="showDatabase dataTitle">
+       <h2>ID</h2>
+    </span>
+
+        
+
+    <span class="showDatabase dataTitle" >
+       
+        <h2> Math</h2>
+        
+    </span>
+
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> English</h2>
+        
+    </span>
+    
+    <span class="showDatabase dataTitle">
+       
+        <h2> Science</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> History</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> Art</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> Letter Grade</h2>
+        
+    </span>
+
+    <span class="showDatabase dataTitle">
+       
+        <h2> GPA</h2>
+        
+    </span>
+
+</div>
+<% if (Array.isArray(sg) && sg.length) { %>
+<% sg.forEach(function(student) { %>
+
+
+   
+
+<div class="row">
+  
+    <span class="showDatabase">
+       <h2><%= student.id %></h2>
+    </span>
+
+        
+
+    <span class="showDatabase" >
+       
+        <h2> <%= student.math %> </h2>
+        
+    </span>
+
+
+    <span class="showDatabase">
+       
+        <h2> <%= student.english %></h2>
+        
+    </span>
+    
+    <span class="showDatabase">
+       
+        <h2> <%= student.science %></h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= student.history %></h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= student.art %></h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= student.letter_grade %> </h2>
+        
+    </span>
+
+    <span class="showDatabase">
+       
+        <h2> <%= student.GPA %></h2>
+        
+    </span>
+
+</div>
+<% }); %>
+<% } else { %>
+
+    <div class="row">
+  
+        <span class="showDatabase">
+           <h2>N/A</h2>
+        </span>
+    
+            
+    
+        <span class="showDatabase" >
+           
+            <h2> N/A </h2>
+            
+        </span>
+    
+    
+        <span class="showDatabase">
+           
+            <h2> N/A</h2>
+            
+        </span>
+        
+        <span class="showDatabase">
+           
+            <h2> N/A</h2>
+            
+        </span>
+    
+        <span class="showDatabase">
+           
+            <h2> N/A</h2>
+            
+        </span>
+    
+        <span class="showDatabase">
+           
+            <h2>N/A</h2>
+            
+        </span>
+    
+        <span class="showDatabase">
+           
+            <h2>N/A</h2>
+            
+        </span>
+    
+        <span class="showDatabase">
+           
+            <h2>N/A</h2>
+            
+        </span>
+    
+    </div>
+
+<% } %>
+</body>
+</html>

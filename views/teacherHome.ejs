@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smily University</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="left headerItems"><img src="logo.png" alt="logo.png" onclick="location.href='http://localhost:3000'"> </div>
+        <div class="middle headerItems"><h4> </h4></div>
+        <div class="right headerItems"><h3> <%= searchedTeacher %>  </h3></div>
+      </div>
+
+
+
+<hr>
+    <h1>Teacher's Homepage</h1>
+    <div class="search-bar">
+    <form action="/teacherHome" method="post"> 
+        <input type="text" placeholder="Search Students" id="search-bar" list="search-suggestions" name="searchedStudent">
+        <datalist id="search-suggestions">
+            
+              <% studentWithThisTeacher.forEach(function(student) { %>
+            
+                <option value="<%= student.student_name  %>"></option>
+               <% }); %>
+
+          </datalist>
+        <button type="submit">Search</button>
+      </div>
+    </form>
+
+      <br><br>
+<h1>Name</h1>
+
+      <hr>
+
+<br>
+      <% studentWithThisTeacher.forEach(function(student) { %>
+        <h1> <%= student.student_name  %> </h1>
+       <% }); %>
+
+
+
+    
+
+
+</body>
+</html>
